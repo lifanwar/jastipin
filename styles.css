@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Variable css */
+
+:root {
+  --purple-color: #4b58de;
+  --brown-color: #f8f6f5;
+  --black-color: #101118;
+  --white-color: #fefefe;
+  --abuabu-color: #667085;
+
+  /* =========== Font and Typography ==========*/
+  --body-font: "Montserrat Alternates", sans-serif;
+  --normal-font-size: 0.938rem;
+
+  /* ========== Font Weight ========== */
+  --font-small: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  --z-toolip: 10;
+  --z-fixed: 100;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+/* REUSABLE CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "logox logox"
+    "footer-bawah footer-bawah";
+  column-gap: 10px;
+  padding-top: 0px;
+}
+
+/* =========== NAVBAR START ========== */
+
+.header {
+  grid-area: header;
+  padding: 20px, 0;
+  height: auto;
+  z-index: var(--z-fixed); */
+}
+
+.nav {
+  position: fixed;
+  height: 50px;
+  background-color:var(--white-color);
+  padding-top: 0;
+  width: 100%;
+  height: 70px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+}
+
+.logo-container {
+  padding-left: 50px;
+}
+
+.nav__menu ul {
+  display: none;
+  /* display: grid; */
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding-right: 50px;
+}
+
+.nav__close, .nav__toggle {
+  display: none;
+}
+
+
+/* =========== NAVBAR END ========== */
+
+
+
+
+
+/* =============== MAIN START ================ */
+
+.main-gradient {
+  position: absolute;
+  z-index: -1;
+  bottom: -5px;
+  width: 100%;
+}
+
+.main-gradient .gradient-1 {
+  background: radial-gradient(circle, #3E1EF5 0%, rgba(255,255,255,1) 62%);
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  opacity: 1;
+  filter: blur(100px);
+  z-index: -2;
+}
+
+.main-gradient .gradient-2 {
+  position: absolute;
+  margin-top: -550px;
+  margin-left: 200px;
+  background: radial-gradient(circle, #F51E21 0%, rgba(255,255,255,1) 62%);
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  opacity: 1;
+  filter: blur(100px);
+}
+
+
+.container-main {
+  display: flex;
+  grid-area: main;
+  height: 574px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* main left */
+
+.main__left {
+  height: 333px;
+  width: 555px;
+  display: flex;
+  flex-wrap: wrap;
+  }
+
+
+.main__left__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.main__left__content h1{
+  font-size: 2.5rem;
+  font-Weight: var(--font-bold);
+}
+
+.main__left__content p {
+  font-size: 32px;
+  font-Weight: var(--font-regular);
+    }
+
+.btn-header {
+  margin-top: 10px;
+  display: flex;
+}
+
+
+.btn-daftar-bagasi a{
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  font-weight: var(--font-bold);
+  color: var(--white-color);
+  background-color: var(--purple-color);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cek-resi a{
+  margin-left: 40px;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  font-weight: var(--font-bold);
+  color: var(--purple-color);
+  background-color: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--purple-color);
+  cursor: pointer;
+}
+
+/* main right */
+
+.main__right {
+  height: 279px;
+  width: 422px;
+}
+
+.card-search {
+  background-color: var(--white-color);
+  height: 279px;
+  width: 422px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.dari {
+  align-self: flex-start;
+  margin-left: 60px;
+  margin-top: -170px;
+  font-size: 24px;
+  position: absolute;
+  background-color: var(--white-color);
+}
+
+.ke {
+  background-color: var(--white-color);
+  position: absolute;
+  align-self: flex-start;
+  margin-top: -30px;
+  margin-left: 60px;
+  font-size: 24px;
+}
+
+.input-dari, .input-ke {
+  margin-right: auto;
+  margin-left: auto;
+  border-style: dashed;
+  box-sizing: border-box;
+  display: block;
+  margin-top: 20px;
+  width: 348.87px;
+  height: 49px;
+}
+
+
+
+input[type=text] {
+  padding-left: 10px;
+  border-radius: 12px;
+  font-size: var(--font-regular);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.bottom_right-card {
+  align-items: center;
+  width: 348.87px;
+  height: 49px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pilih-tanggal {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.calendar-icon {
+  font-size: 25px;
+}
+
+
+.pilih-tanggal h4 {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: var(--font-medium);
+}
+
+.btn-search-bagasi {
+  padding: 5px 20px 5px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  font-weight: var(--font-bold);
+  color: var(--white-color);
+  background-color: var(--purple-color);
+  border: none;
+  cursor: pointer;
+}
+
+
+/* =============== MAIN END ================ */
+
+
+
+/* =============== PARTNER BAGASI START ================ */
+
+.container_logobagasi {
+  height: 341px;
+  width: 100%;
+  grid-area: logox;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.judul_partner-bagasi {
+  margin-top: 30px;
+  margin-left: 114px;
+  flex-wrap: wrap;
+}
+
+.judul_partner-bagasi h3 {
+  font-size: 30px;
+}
+
+.judul_partner-bagasi p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.logo_partner-bagasi {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo1, .logo3, .logo5, .logo7 {
+  background-color: #1fde0e74;
+  width: 100px;
+  height: 100px;
+}
+.logo2, .logo4, .logo6{
+  background-color: black;
+}
+
+.swiper {
+  width: 80%;
+  height: 300px;
+}
+
+
+/* =============== PARTNER BAGASI END ================ */
+
+
+
+/* =============== FOOTER START ================ */
+
+.footer-bawah {
+  grid-area: footer-bawah;
+  background-color: #4b58de;
+  height: 400px;
+}
+/* =============== FOOTER END ================ */
