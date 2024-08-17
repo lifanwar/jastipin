@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- cdn icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Jastipin</title>
+  </head>
+  <body>
+    <header
+      class="header fixed flex justify-evenly items-center bg-slate-500 h-[100px] w-full"
+    >
+      <div class="logo">Logo</div>
+      <nav>
+        <ul class="flex hidden">
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex flex-col justify-center items-center">
+      <div
+        class="flex detail w-full h-[100px] bg-white justify-center items-center"
+      >
+        <div
+          class="flex w-[774px] h-[60px] border-2 border-black rounded-full"
+        ></div>
+      </div>
+
+      <div
+        class="weekly cursor-pointer w-full h-[100px] bg-blue-700 flex justify-center items-center gap-5 text-xl text-slate-300"
+      >
+        <div class="left-icon text-4xl hover:text-white">
+          <i class="ri-arrow-left-wide-line"></i>
+        </div>
+        <div class="tanggal-weekly flex">
+          <div class="hover:text-white"><a href="#">Sen, 15 Sep</a></div>
+          <div class="hover:text-white"><a href="#">Sen, 15 Sep</a></div>
+          <div class="text-white"><a href="#">Sen, 15 Sep</a></div>
+          <div class="hover:text-white"><a href="#">Sen, 15 Sep</a></div>
+          <div class="hover:text-white"><a href="#">Sen, 15 Sep</a></div>
+        </div>
+
+        <div class="right-icon text-4xl hover:text-white">
+          <i class="ri-arrow-right-wide-line"></i>
+        </div>
+      </div>
+
+      <div
+        class="filter font-semibold w-full h-[80px] flex items-center justify-between"
+      >
+        <div class="flex ml-10">
+          <h4>Result :</h4>
+          <h4>8</h4>
+        </div>
+        <div class="">
+          <button
+            class="hover:bg-gray-500 hover:text-white rounded-full px-9 my-6 drop-shadow-md mr-10"
+          >
+            Filter
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="shadow-md rounded-xl w-[1008px] h-auto flex flex-col flex-wrap"
+      >
+        <div
+          class="title bg-[#FCFBFB] grid grid-cols-4 items-center justify-center w-full h-[105px] rounded-t-lg"
+        >
+          <h4 class="col-span-1 ml-3">Company</h4>
+          <h4>Bagasi</h4>
+          <h4>Maskapai</h4>
+        </div>
+        <div class="grid grid-cols-4 w-full h-[105px] items-center">
+          <h4 class="col-span-1">Jastipin</h4>
+          <h4>40Kg</h4>
+          <h4>Etihad</h4>
+          <h4>logo</h4>
+        </div>
+        <div class="bg-[#F8F6F5] grid grid-cols-4 h-[105px] items-center">
+          <h4 class="col-span-1">Jastipin</h4>
+          <h4>40Kg</h4>
+          <h4>Etihad</h4>
+          <h4>logo</h4>
+        </div>
+        <div class="grid grid-cols-4 h-[105px] items-center">
+          <h4 class="col-span-1">Jastipin</h4>
+          <h4>40Kg</h4>
+          <h4>Etihad</h4>
+          <h4>logo</h4>
+        </div>
+        <div class="bg-[#F8F6F5] grid grid-cols-4 h-[105px] items-center">
+          <h4 class="col-span-1">Jastipin</h4>
+          <h4>40Kg</h4>
+          <h4>Etihad</h4>
+          <h4>logo</h4>
+        </div>
+        <div class="grid grid-cols-4 h-[105px] items-center">
+          <h4 class="col-span-1">Jastipin</h4>
+          <h4>40Kg</h4>
+          <h4>Etihad</h4>
+          <h4>logo</h4>
+        </div>
+      </div>
+
+      <div></div>
+    </main>
+
+    <footer class="w-full h-52 bg-black"></footer>
+  </body>
+</html>
