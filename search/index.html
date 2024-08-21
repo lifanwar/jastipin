@@ -13,56 +13,139 @@
     <title>Jastipin</title>
   </head>
   <body>
+    <!-- HEADER start -->
+
     <header
-      class="header fixed flex justify-evenly items-center bg-slate-500 h-[100px] w-full"
+      class="sticky inset-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-lg"
     >
-      <div class="logo">Logo</div>
-      <nav>
-        <ul class="flex hidden">
-          <li><a href="#">home</a></li>
-          <li><a href="#">about</a></li>
+      <nav
+        class="mx-auto flex max-w-6xl gap-8 px-6 transition-all duration-200 ease-in-out lg:px-12 py-4"
+      >
+        <div class="relative flex items-center">
+          <a href="/">
+            <img
+              src="https://www.svgrepo.com/show/499831/target.svg"
+              loading="lazy"
+              style="color: transparent"
+              width="32"
+              height="32"
+          /></a>
+        </div>
+        <ul class="hidden items-center justify-center gap-6 md:flex">
+          <li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
+            <a href="#">Pricing</a>
+          </li>
+          <li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
+            <a href="#">Blog</a>
+          </li>
+          <li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
+            <a href="#">Docs</a>
+          </li>
         </ul>
+        <div class="flex-grow"></div>
+        <div class="hidden items-center justify-center gap-6 md:flex">
+          <a href="#" class="font-dm text-sm font-medium text-slate-700"
+            >Sign in</a
+          >
+          <a
+            href="#"
+            class="rounded-md bg-gradient-to-br from-green-600 to-emerald-400 px-3 py-1.5 font-dm text-sm font-medium text-white shadow-md shadow-green-400/50 transition-transform duration-200 ease-in-out hover:scale-[1.03]"
+            >Sign up for free
+          </a>
+        </div>
+        <div class="relative flex items-center justify-center md:hidden">
+          <button type="button">
+            <i class="ri-menu-line text-2xl"></i>
+          </button>
+        </div>
       </nav>
     </header>
 
+    <!-- HEADER end -->
+
+    <!-- MAIN -->
+
+    <!-- start detail tanggal -->
+
     <main class="flex flex-col justify-center items-center">
       <div
-        class="flex detail w-full h-[100px] bg-white justify-center items-center"
+        class="md:flex detail w-full hidden md:h-[100px] bg-white justify-center items-center"
       >
         <div
-          class="flex w-[774px] h-[60px] border-2 border-black rounded-full"
-        ></div>
-      </div>
-
-      <div
-        class="weekly cursor-pointer w-full h-[100px] bg-blue-700 flex justify-center items-center gap-5 text-xl text-slate-300"
-      >
-        <div class="left-icon text-4xl hover:text-white">
-          <i class="ri-arrow-left-wide-line"></i>
-        </div>
-        <div class="tanggal-weekly flex">
-          <div class="hover:text-white"><a href="#">Sen, 15 Sep</a></div>
-          <div class="hover:text-white"><a href="#">Sen, 15 Sep</a></div>
-          <div class="text-white"><a href="#">Sen, 15 Sep</a></div>
-          <div class="hover:text-white"><a href="#">Sen, 15 Sep</a></div>
-          <div class="hover:text-white"><a href="#">Sen, 15 Sep</a></div>
-        </div>
-
-        <div class="right-icon text-4xl hover:text-white">
-          <i class="ri-arrow-right-wide-line"></i>
+          class="flex items-center justify-around md:w-[700px] md:h-[60px] border-2 border-black rounded-full"
+        >
+          <div class="flex w-[180px] justify-evenly border-e px-3 py-1">
+            <h4>CGK</h4>
+            <i class="ri-arrow-right-line"></i>
+            <h4>CAI</h4>
+          </div>
+          <div class="flex w-[180px] justify-evenly">
+            <i class="ri-calendar-line"></i>
+            <h4>Sen, 15 Sep 2024</h4>
+          </div>
+          <div class="flex w-[180px] justify-center border-s">
+            <div class="search bg-black rounded-full text-white px-3 py-1">
+              <i class="ri-search-line"></i>
+              <a href="#">Search</a>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!-- end detail tanggal -->
+
       <div
-        class="filter font-semibold w-full h-[80px] flex items-center justify-between"
+        class="weekly cursor-pointer w-full h-[100px] bg-[#4855DC] flex justify-center items-center gap-5 text-xl text-slate-300"
       >
-        <div class="flex ml-10">
+        <div class="flex items-center justify-around w-full">
+          <div class="pl-8 left-icon text-4xl hover:text-white">
+            <i class="ri-arrow-left-wide-line"></i>
+          </div>
+
+          <div
+            class="tanggal-weekly flex items-center justify-evenly w-full h-[100px]"
+          >
+            <div
+              class="flex h-full items-center hover:text-white hover:border-b-4"
+            >
+              <a href="#">Sen, 15 Sep</a>
+            </div>
+            <div
+              class="flex h-full items-center hover:text-white hover:border-b-4"
+            >
+              <a href="#">Sen, 15 Sep</a>
+            </div>
+            <div class="text-white flex border-b-4 h-full items-center">
+              <a href="#">Sen, 15 Sep</a>
+            </div>
+            <div
+              class="flex h-full items-center hover:text-white hover:border-b-4"
+            >
+              <a href="#">Sen, 15 Sep</a>
+            </div>
+            <div
+              class="flex h-full items-center hover:text-white hover:border-b-4"
+            >
+              <a href="#">Sen, 15 Sep</a>
+            </div>
+          </div>
+
+          <div class="pr-8 right-icon text-4xl hover:text-white">
+            <i class="ri-arrow-right-wide-line"></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="filter font-semibold w-full py-3 flex items-center justify-between"
+      >
+        <div class="flex ml-10 cursor-pointer">
           <h4>Result :</h4>
           <h4>8</h4>
         </div>
         <div class="">
           <button
-            class="hover:bg-gray-500 hover:text-white rounded-full px-9 my-6 drop-shadow-md mr-10"
+            class="hover:bg-gray-500 hover:text-white rounded-full px-9 my-6 drop-shadow-md mr-10 z-0"
           >
             Filter
           </button>
@@ -70,40 +153,47 @@
       </div>
 
       <div
-        class="shadow-md rounded-xl w-[1008px] h-auto flex flex-col flex-wrap"
+        class="shadow-md rounded-xl w-[850px] h-auto flex flex-col flex-wrap"
       >
         <div
-          class="title bg-[#FCFBFB] grid grid-cols-4 items-center justify-center w-full h-[105px] rounded-t-lg"
+          class="head bg-[#FCFBFB] grid grid-cols-4 items-center justify-center w-full h-[5.3rem] rounded-t-lg"
         >
           <h4 class="col-span-1 ml-3">Company</h4>
           <h4>Bagasi</h4>
           <h4>Maskapai</h4>
         </div>
-        <div class="grid grid-cols-4 w-full h-[105px] items-center">
+        <div class="grid grid-cols-4 w-full h-[5.3rem] items-center">
+          <h4 class="col-span-1">Jastipin</h4>
+          <h4>40Kg</h4>
+          <h4>Etihad</h4>
+          <button class="flex">
+            <a
+              class="align py-1 px-3 items-center text-center text-white bg-violet-600 border border-violet-600 rounded-full active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring"
+              href="#"
+            >
+              Detail
+            </a>
+          </button>
+        </div>
+        <div class="bg-[#F8F6F5] grid grid-cols-4 h-[5.3rem] items-center">
           <h4 class="col-span-1">Jastipin</h4>
           <h4>40Kg</h4>
           <h4>Etihad</h4>
           <h4>logo</h4>
         </div>
-        <div class="bg-[#F8F6F5] grid grid-cols-4 h-[105px] items-center">
+        <div class="grid grid-cols-4 h-[5.3rem] items-center">
           <h4 class="col-span-1">Jastipin</h4>
           <h4>40Kg</h4>
           <h4>Etihad</h4>
           <h4>logo</h4>
         </div>
-        <div class="grid grid-cols-4 h-[105px] items-center">
+        <div class="bg-[#F8F6F5] grid grid-cols-4 h-[5.3rem] items-center">
           <h4 class="col-span-1">Jastipin</h4>
           <h4>40Kg</h4>
           <h4>Etihad</h4>
           <h4>logo</h4>
         </div>
-        <div class="bg-[#F8F6F5] grid grid-cols-4 h-[105px] items-center">
-          <h4 class="col-span-1">Jastipin</h4>
-          <h4>40Kg</h4>
-          <h4>Etihad</h4>
-          <h4>logo</h4>
-        </div>
-        <div class="grid grid-cols-4 h-[105px] items-center">
+        <div class="grid grid-cols-4 h-[5.3rem] items-center">
           <h4 class="col-span-1">Jastipin</h4>
           <h4>40Kg</h4>
           <h4>Etihad</h4>
@@ -111,9 +201,56 @@
         </div>
       </div>
 
-      <div></div>
+      <div class="py-8 flex justify-evenly w-full">
+        <a
+          class="align py-1 px-3 items-center text-center border border-violet-600 rounded-full active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring"
+          href="#"
+        >
+          Back
+        </a>
+        <a
+          class="align py-1 px-3 items-center text-center border border-violet-600 rounded-full hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring"
+          href="#"
+        >
+          Tampilkan lebih banyak
+        </a>
+      </div>
     </main>
 
-    <footer class="w-full h-52 bg-black"></footer>
+    <footer class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+      <div class="border-t border-slate-900/5 py-10">
+        <svg
+          class="mx-auto h-5 w-auto text-slate-900"
+          aria-hidden="true"
+          viewBox="0 0 160 24"
+          fill="none"
+        >
+          <path
+            d="M18.724 1.714c-4.538 0-7.376 2.286-8.51 6.857 1.702-2.285 3.687-3.143 5.957-2.57 1.296.325 2.22 1.271 3.245 2.318 1.668 1.706 3.6 3.681 7.819 3.681 4.539 0 7.376-2.286 8.51-6.857-1.701 2.286-3.687 3.143-5.957 2.571-1.294-.325-2.22-1.272-3.245-2.32-1.668-1.705-3.6-3.68-7.819-3.68zM10.214 12c-4.539 0-7.376 2.286-8.51 6.857 1.701-2.286 3.687-3.143 5.957-2.571 1.294.325 2.22 1.272 3.245 2.32 1.668 1.705 3.6 3.68 7.818 3.68 4.54 0 7.377-2.286 8.511-6.857-1.702 2.286-3.688 3.143-5.957 2.571-1.295-.326-2.22-1.272-3.245-2.32-1.669-1.705-3.6-3.68-7.82-3.68z"
+            class="fill-sky-400"
+          ></path>
+          <path
+            d="M51.285 9.531V6.857h-3.166v-3.6l-2.758.823v2.777h-2.348v2.674h2.348v6.172c0 3.343 1.686 4.526 5.924 4.011V17.22c-2.094.103-3.166.129-3.166-1.517V9.53h3.166zm12.087-2.674v1.826c-.97-1.337-2.476-2.16-4.468-2.16-3.472 0-6.357 2.931-6.357 6.763 0 3.805 2.885 6.763 6.357 6.763 1.992 0 3.498-.823 4.468-2.186v1.851h2.758V6.857h-2.758zM59.338 17.4c-2.297 0-4.034-1.723-4.034-4.114 0-2.392 1.736-4.115 4.034-4.115s4.034 1.723 4.034 4.115c0 2.391-1.736 4.114-4.034 4.114zM70.723 4.929c.97 0 1.762-.823 1.762-1.775 0-.977-.792-1.774-1.762-1.774s-1.762.797-1.762 1.774c0 .952.792 1.775 1.762 1.775zm-1.379 14.785h2.758V6.857h-2.758v12.857zm5.96 0h2.757V.943h-2.758v18.771zM95.969 6.857l-2.502 8.872-2.655-8.872h-2.63L85.5 15.73l-2.477-8.872h-2.91l4.008 12.857h2.707l2.68-8.665 2.656 8.665h2.706L98.88 6.857h-2.911zm6.32-1.928c.97 0 1.762-.823 1.762-1.775 0-.977-.792-1.774-1.762-1.774s-1.762.797-1.762 1.774c0 .952.792 1.775 1.762 1.775zm-1.379 14.785h2.758V6.857h-2.758v12.857zm12.674-13.191c-1.736 0-3.115.643-3.957 1.98V6.857h-2.758v12.857h2.758v-6.891c0-2.623 1.43-3.703 3.242-3.703 1.737 0 2.86 1.029 2.86 2.983v7.611h2.757V11.82c0-3.343-2.042-5.297-4.902-5.297zm17.982-4.809v6.969c-.971-1.337-2.477-2.16-4.468-2.16-3.473 0-6.358 2.931-6.358 6.763 0 3.805 2.885 6.763 6.358 6.763 1.991 0 3.497-.823 4.468-2.186v1.851h2.757v-18h-2.757zM127.532 17.4c-2.298 0-4.034-1.723-4.034-4.114 0-2.392 1.736-4.115 4.034-4.115 2.297 0 4.034 1.723 4.034 4.115 0 2.391-1.737 4.114-4.034 4.114z"
+            fill="currentColor"
+          ></path>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M145.532 3.429h8.511c.902 0 1.768.36 2.407 1.004.638.643.997 1.515.997 2.424v8.572c0 .909-.359 1.781-.997 2.424a3.394 3.394 0 01-2.407 1.004h-8.511a3.39 3.39 0 01-2.407-1.004 3.438 3.438 0 01-.997-2.424V6.857c0-.91.358-1.781.997-2.424a3.39 3.39 0 012.407-1.004zm-5.106 3.428c0-1.364.538-2.672 1.495-3.636a5.09 5.09 0 013.611-1.507h8.511c1.354 0 2.653.542 3.61 1.507a5.16 5.16 0 011.496 3.636v8.572a5.16 5.16 0 01-1.496 3.636 5.086 5.086 0 01-3.61 1.506h-8.511a5.09 5.09 0 01-3.611-1.506 5.164 5.164 0 01-1.495-3.636V6.857zm10.907 6.251c0 1.812-1.359 2.916-3.193 2.916-1.823 0-3.182-1.104-3.182-2.916v-5.65h1.633v5.52c0 .815.429 1.427 1.549 1.427 1.12 0 1.549-.612 1.549-1.428v-5.52h1.644v5.652zm1.72 2.748V7.457h1.644v8.4h-1.644z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        <p class="mt-5 text-center text-sm leading-6 text-slate-500">
+          © 2024 Jastipin
+        </p>
+        <div
+          class="mt-8 flex items-center justify-center space-x-4 text-sm font-semibold leading-6 text-slate-700"
+        >
+          <a href="/privacy-policy">Privacy policy</a>
+          <div class="h-4 w-px bg-slate-500/20"></div>
+          <a href="/changelog">Changelog</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
