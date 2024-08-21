@@ -22,14 +22,16 @@
         class="mx-auto flex max-w-6xl gap-8 px-6 transition-all duration-200 ease-in-out lg:px-12 py-4"
       >
         <div class="relative flex items-center">
-          <a href="/">
+          <a href="/" class="flex items-center">
             <img
-              src="https://www.svgrepo.com/show/499831/target.svg"
+              src="https://www.svgrepo.com/show/401164/baggage-claim.svg"
               loading="lazy"
               style="color: transparent"
               width="32"
               height="32"
-          /></a>
+            />
+            <h4 class="ml-1 font-semibold text-[#4855DC]">Jastipin</h4></a
+          >
         </div>
         <ul class="hidden items-center justify-center gap-6 md:flex">
           <li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
@@ -69,10 +71,33 @@
 
     <main class="flex flex-col justify-center items-center">
       <div
-        class="md:flex detail w-full hidden md:h-[100px] bg-white justify-center items-center"
+        class="md:flex detail w-full md:h-[100px] bg-white justify-center items-center"
       >
+        <!-- mobile -->
+        <div class="h-[100px] md:hidden flex items-center justify-between">
+          <div class="flex-col pl-8">
+            <div class="flex">
+              <h4>CGK</h4>
+              <i class="ri-arrow-right-line"></i>
+              <h4>CAI</h4>
+            </div>
+            <div>
+              <h4>Sen, 15 Sep 2024</h4>
+            </div>
+          </div>
+          <div class="pr-8 cursor-pointer hover:text-[#4855DC]">
+            <div
+              class="search bg-black rounded-full text-white px-3 py-1 hover:text-black hover:bg-white hover:border hover:border-current"
+            >
+              <i class="ri-search-line"></i>
+              <a href="#">Search</a>
+            </div>
+          </div>
+        </div>
+        <!-- desktop -->
+
         <div
-          class="flex items-center justify-around md:w-[700px] md:h-[60px] border-2 border-black rounded-full"
+          class="md:flex items-center hidden justify-around md:w-[700px] md:h-[60px] border-2 border-black rounded-full"
         >
           <div class="flex w-[180px] justify-evenly border-e px-3 py-1">
             <h4>CGK</h4>
@@ -84,7 +109,9 @@
             <h4>Sen, 15 Sep 2024</h4>
           </div>
           <div class="flex w-[180px] justify-center border-s">
-            <div class="search bg-black rounded-full text-white px-3 py-1">
+            <div
+              class="search bg-black rounded-full text-white px-3 py-1 hover:text-black hover:bg-white hover:border hover:border-current cursor-pointer"
+            >
               <i class="ri-search-line"></i>
               <a href="#">Search</a>
             </div>
@@ -94,11 +121,15 @@
 
       <!-- end detail tanggal -->
 
+      <!-- weekly start -->
+
       <div
         class="weekly cursor-pointer w-full h-[100px] bg-[#4855DC] flex justify-center items-center gap-5 text-xl text-slate-300"
       >
-        <div class="flex items-center justify-around w-full">
-          <div class="pl-8 left-icon text-4xl hover:text-white">
+        <div class="sm:flex sm:items-center sm:justify-around w-full">
+          <div
+            class="pl-8 left-icon text-4xl hover:text-white sm:inline hidden"
+          >
             <i class="ri-arrow-left-wide-line"></i>
           </div>
 
@@ -130,11 +161,15 @@
             </div>
           </div>
 
-          <div class="pr-8 right-icon text-4xl hover:text-white">
+          <div
+            class="pr-8 right-icon text-4xl hover:text-white sm:inline hidden"
+          >
             <i class="ri-arrow-right-wide-line"></i>
           </div>
         </div>
       </div>
+
+      <!-- weekly end -->
 
       <div
         class="filter font-semibold w-full py-3 flex items-center justify-between"
@@ -152,54 +187,142 @@
         </div>
       </div>
 
-      <div
-        class="shadow-md rounded-xl w-[850px] h-auto flex flex-col flex-wrap"
-      >
+      <!-- start list -->
+
+      <div class="shadow-md rounded-xl md:w-[70%] w-[90%] h-auto flex flex-col">
         <div
-          class="head bg-[#FCFBFB] grid grid-cols-4 items-center justify-center w-full h-[5.3rem] rounded-t-lg"
+          class="head bg-[#FCFBFB] flex items-center justify-between w-full h-[5.3rem] rounded-t-lg"
         >
-          <h4 class="col-span-1 ml-3">Company</h4>
-          <h4>Bagasi</h4>
-          <h4>Maskapai</h4>
+          <div class="ml-11 w-[150px] h-full flex items-center">
+            <h4>Company</h4>
+          </div>
+          <div class="w-[150px] h-full flex justify-center items-center">
+            <h4>Bagasi</h4>
+          </div>
+          <div class="w-[150px] h-full flex justify-center items-center">
+            <h4>Maskapai</h4>
+          </div>
+          <div
+            class="w-[150px] h-full flex justify-center items-center mr-11"
+          ></div>
         </div>
-        <div class="grid grid-cols-4 w-full h-[5.3rem] items-center">
-          <h4 class="col-span-1">Jastipin</h4>
-          <h4>40Kg</h4>
-          <h4>Etihad</h4>
-          <button class="flex">
-            <a
-              class="align py-1 px-3 items-center text-center text-white bg-violet-600 border border-violet-600 rounded-full active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring"
-              href="#"
-            >
-              Detail
-            </a>
-          </button>
+
+        <div class="flex justify-between w-full h-[5.3rem] items-center">
+          <div class="ml-11 w-[150px] h-full flex items-center">
+            <h4>Jastipin</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center">
+            <h4>Etihad</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center">
+            <h4>Maskapai</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center mr-11">
+            <button class="flex">
+              <a
+                class="align py-1 px-3 items-center text-center text-white bg-violet-600 border border-violet-600 rounded-full active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring"
+                href="#"
+              >
+                Detail
+              </a>
+            </button>
+          </div>
         </div>
-        <div class="bg-[#F8F6F5] grid grid-cols-4 h-[5.3rem] items-center">
-          <h4 class="col-span-1">Jastipin</h4>
-          <h4>40Kg</h4>
-          <h4>Etihad</h4>
-          <h4>logo</h4>
+
+        <div
+          class="bg-[#F8F6F5] flex justify-between w-full h-[5.3rem] items-center"
+        >
+          <div class="ml-11 w-[150px] h-full flex items-center">
+            <h4>Jastipin</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center">
+            <h4>Etihad</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center">
+            <h4>Maskapai</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center mr-11">
+            <button class="flex">
+              <a
+                class="align py-1 px-3 items-center text-center text-white bg-violet-600 border border-violet-600 rounded-full active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring"
+                href="#"
+              >
+                Detail
+              </a>
+            </button>
+          </div>
         </div>
-        <div class="grid grid-cols-4 h-[5.3rem] items-center">
-          <h4 class="col-span-1">Jastipin</h4>
-          <h4>40Kg</h4>
-          <h4>Etihad</h4>
-          <h4>logo</h4>
+
+        <div class="flex justify-between w-full h-[5.3rem] items-center">
+          <div class="ml-11 w-[150px] h-full flex items-center">
+            <h4>Jastipin</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center">
+            <h4>Etihad</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center">
+            <h4>Maskapai</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center mr-11">
+            <button class="flex">
+              <a
+                class="align py-1 px-3 items-center text-center text-white bg-violet-600 border border-violet-600 rounded-full active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring"
+                href="#"
+              >
+                Detail
+              </a>
+            </button>
+          </div>
         </div>
-        <div class="bg-[#F8F6F5] grid grid-cols-4 h-[5.3rem] items-center">
-          <h4 class="col-span-1">Jastipin</h4>
-          <h4>40Kg</h4>
-          <h4>Etihad</h4>
-          <h4>logo</h4>
+
+        <div
+          class="bg-[#F8F6F5] flex justify-between w-full h-[5.3rem] items-center"
+        >
+          <div class="ml-11 w-[150px] h-full flex items-center">
+            <h4>Jastipin</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center">
+            <h4>Etihad</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center">
+            <h4>Maskapai</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center mr-11">
+            <button class="flex">
+              <a
+                class="align py-1 px-3 items-center text-center text-white bg-violet-600 border border-violet-600 rounded-full active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring"
+                href="#"
+              >
+                Detail
+              </a>
+            </button>
+          </div>
         </div>
-        <div class="grid grid-cols-4 h-[5.3rem] items-center">
-          <h4 class="col-span-1">Jastipin</h4>
-          <h4>40Kg</h4>
-          <h4>Etihad</h4>
-          <h4>logo</h4>
+
+        <div class="flex justify-between w-full h-[5.3rem] items-center">
+          <div class="ml-11 w-[150px] h-full flex items-center">
+            <h4>Jastipin</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center">
+            <h4>Etihad</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center">
+            <h4>Maskapai</h4>
+          </div>
+          <div class="w-[150px] h-full flex items-center justify-center mr-11">
+            <button class="flex">
+              <a
+                class="align py-1 px-3 items-center text-center text-white bg-violet-600 border border-violet-600 rounded-full active:text-violet-500 hover:bg-transparent hover:text-violet-600 focus:outline-none focus:ring"
+                href="#"
+              >
+                Detail
+              </a>
+            </button>
+          </div>
         </div>
       </div>
+
+      <!-- akhir list -->
 
       <div class="py-8 flex justify-evenly w-full">
         <a
